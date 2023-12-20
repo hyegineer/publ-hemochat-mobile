@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="assets/js/jquery-3.6.1.min.js"></script>
+</head>
+
+<body ontouchstart>
+  <div id="app">
+    <div class="header">
+      <h1 class="logo">
+        <a href="#">
+          <img src="assets/images/logo-hemochat.png" alt="">
+        </a>
+      </h1>
+
+      <button type="button" class="menu-btn">
+        <img src="assets/images/menu.svg" alt="">
+      </button>
+    </div>
+
+    <div class="page-wrapper">
+      <div class="page-container">
+        <div class="chat-container">
+          <div class="chat-status-area">
+            <div class="bubble-grp in">
+              <div class="bubble">제 피검사 결과는 어떤가요?</div>
+            </div>
+
+            <div class="bubble-grp out">
+              <div class="icon">
+                <img src="assets/images/icon-hemo.svg" alt="">
+              </div>
+              <div class="bubble">당신의 피 검사 결과는 모든 항목이 “Normal Range”로 나와 있습니다.
+                이는 당신의 혈액 상태가 일반적인 범위 내에 있는 것을 의미합니다. 이 결과는 대부분의 질환을 제외한 정상적인 상태를 나타냅니다. 하지만 피 검사 결과만으로는 모든 질환을 완전히 배제할
+                수는 없으므로, 다른 증상이나 의심되는 사항이 있다면 의사와 상담하는 것이 좋습니다. 어떤 질문이든지 더 있으신가요?</div>
+            </div>
+
+            <div class="bubble-grp out">
+              <div class="icon">
+                <img src="assets/images/icon-hemo.svg" alt="">
+              </div>
+              <div class="bubble">
+                <div class="dot-flashing-grp">
+                  <div class="dot-flashing"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-create-area">
+            <div class="inp-grp">
+              <input type="text" class="inp" placeholder="궁금한 사항을 입력해주세요.">
+              <button type="button" class="send-btn">전송</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="assets/js/ui.js"></script>
+</body>
+
+</html>

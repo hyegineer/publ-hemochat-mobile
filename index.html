@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="assets/js/jquery-3.6.1.min.js"></script>
+</head>
+
+<body ontouchstart>
+  <div id="app">
+    <div class="header">
+      <div class="hd-left">
+        <h1 class="logo">
+          <a href="#">
+            <img src="assets/images/logo-hemochat.png" alt="">
+          </a>
+        </h1>
+      </div>
+
+      <div class="hd-right">
+        <button type="button" class="circle-hbtn">
+          <i class="ico ico-report"></i>
+          <span class="txt">검사지촬영</span>
+        </button>
+
+        <button type="button" class="menu-btn">
+          <img src="assets/images/menu.svg" alt="">
+        </button>
+      </div>
+    </div>
+
+    <div class="header-nav-container">
+      <button type="button" class="close-btn">
+        <i class="ico ico-close"></i>
+      </button>
+      
+      <ul>
+        <li>
+          <a href="chat.html">채팅</a>
+        </li>
+
+        <li>
+          <a href="mypage-main.html">마이페이지</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="page-wrapper">
+      <div class="page-container">
+        <div class="top-content">
+          <div class="search-inp-grp">
+            <input type="text" class="inp" placeholder="항목 검색">
+            <button type="button">
+              <img src="assets/images/icon-search.svg" alt="">
+            </button>
+          </div>
+
+          <div id="list-grp" class="checkup-list-grp">
+            <button type="button" data-type="type01" class="list active">일반 화학 검사</button>
+            <button type="button" data-type="type02" class="list">혈액 응고 검사</button>
+            <button type="button" data-type="type03" class="list">요 검사</button>
+            <button type="button" data-type="type04" class="list">수혈 검사</button>
+            <button type="button" data-type="type05" class="list">효소&면역 혈청</button>
+            <button type="button" data-type="type06" class="list">혈소판 약물 반응</button>
+            <button type="button" data-type="type07" class="list">혈액학 검사</button>
+            <button type="button" data-type="type08" class="list">유전자 검사</button>
+            <button type="button" data-type="type09" class="list">갑상선 표지자 검사</button>
+            <button type="button" data-type="type10" class="list">심장 표지자 검사</button>
+            <button type="button" data-type="type11" class="list">골형성 표지자 검사</button>
+            <button type="button" data-type="type12" class="list">암 표지자 검사</button>
+          </div>
+        </div>
+
+        <div class="bottom-content">
+          <!-- 1. 일반 화학 검사 -->
+          <div id="type01" class="selected-container active">
+            <ul>
+              <!-- BUN -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>BUN</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Creatinine -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Creatinine</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- CRP(Quantitative) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>CRP</span>
+                  <span class="sm-text">(Quantitative)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- T.cholesterol -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>T.cholesterol</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- HDL-cholesterol -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>HDL-cholesterol</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Glucose(Quantitative) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Glucose</span>
+                  <span class="sm-text">(Quantitative)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- e-GFR(ERI) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>e-GFR</span>
+                  <span class="sm-text">(ERI)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Uric Acid -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Uric Acid</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Hb.A1c -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Hb.A1c</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Ra Factor(정량) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Ra Factor</span>
+                  <span class="sm-text">(정량)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- IMA-M -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>IMA-M</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Sodium(Na) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Sodium</span>
+                  <span class="sm-text">(Na)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Potassium(K) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Potassium</span>
+                  <span class="sm-text">(K)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Chioride(Cl) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Chioride</span>
+                  <span class="sm-text">(Cl)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Total Protein -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Total Protein</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Albumin -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Albumin</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Total Bilirubin -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Total Bilirubin</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Alkaline Phosphatase -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Alkaline Phosphatase</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- r-GTP -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>r-GTP</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- AST(SGOT) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>AST</span>
+                  <span class="sm-text">(SGOT)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- ALT(SGPT) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>ALT</span>
+                  <span class="sm-text">(SGPT)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Total Ca -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Total Ca</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Total Amylase -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Total Amylase</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Lipase -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Lipase</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 2. 혈액 응고 검사 -->
+          <div id="type02" class="selected-container">
+            <ul>
+              <!-- APTT -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>APTT</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- PT(INR) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>PT</span>
+                  <span class="sm-text">(INR)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- PT(Prothrombin Time) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>PT</span>
+                  <span class="sm-text">(Prothrombin Time)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 3. 요 검사 -->
+          <div id="type03" class="selected-container">
+            <ul>
+              <!-- U-PRO -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>U-PRO</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- U-COLOR -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>U-COLOR</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- U-BLOOD -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>U-BLOOD</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- U-GLU -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>U-GLU</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- U-BILI -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>U-BILI</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- U-URO -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>U-URO</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- U-KET -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>U-KET</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- U-NIT -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>U-KET</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- pH -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>pH</span>
+                  <span class="sm-text">(U)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- S.G -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>S.G</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- U-LEU -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>U-LEU</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 4. 수혈 검사 -->
+          <div id="type04" class="selected-container">
+            <ul>
+              <!-- ABO 혈액형 검사 -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>ABO 혈액형 검사</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Rho(O) Typing(Rh-Hr) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Rho(O) Typing</span>
+                  <span class="sm-text">(Rh-Hr)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 5. 효소, 면역 혈청 검사 -->
+          <div id="type05" class="selected-container">
+            <ul>
+              <!-- VDRL(RPR정성) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>VDRL</span>
+                  <span class="sm-text">(RPR정성)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- HIV(정성) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>HIV</span>
+                  <span class="sm-text">(정성)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- HBs Ag(정성) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>HBs Ag</span>
+                  <span class="sm-text">(정성)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- HBs Ab(정성) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>HBs Ab</span>
+                  <span class="sm-text">(정성)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- HCV Ab(정성) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>HCV Ab</span>
+                  <span class="sm-text">(정성)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 6. 혈소판 약물 반응 검사 -->
+          <div id="type06" class="selected-container">
+            <ul>
+              <!-- AA(Aspirin) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>AA</span>
+                  <span class="sm-text">(Aspirin)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- ADP(P2V12) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>ADP</span>
+                  <span class="sm-text">(P2V12)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 7. 혈액학 검사 -->
+          <div id="type07" class="selected-container">
+            <ul>
+              <!-- ESR -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>ESR</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Lymph% -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Lymph%</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- MID% -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>MID%</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- GRAN% -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>GRAN%</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- WBC Count -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>WBC Count</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- RBC Count -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>RBC Count</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Hemoglobin -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Hemoglobin</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Hematocrit(Ht) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Hematocrit</span>
+                  <span class="sm-text">(Ht)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- NCV -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>NCV</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- NCH -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>NCH</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- NCHC -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>NCHC</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- ROW -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>ROW</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- PLT(Platelet Count) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>PLT</span>
+                  <span class="sm-text">(Platelet Count)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- NPV -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>NPV</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- POW -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>POW</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- PCT -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>PCT</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 8. 유전자 검사 -->
+          <div id="type08" class="selected-container">
+            <ul>
+              <!-- HLA-B27 검사(DNA 검사법) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>HLA-B27 검사</span>
+                  <span class="sm-text">(DNA 검사법)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Ra Factor(정량) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Ra Factor</span>
+                  <span class="sm-text">(정량)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 9. 갑상선 표지자 검사 -->
+          <div id="type09" class="selected-container">
+            <ul>
+              <!-- T3(Triiodothyronine) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>T3</span>
+                  <span class="sm-text">(Triiodothyronine)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Free T4 -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Free T4 </span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- TSH(Thyroid Stimulatin Hormone) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>TSH</span>
+                  <span class="sm-text">(Thyroid Stimulatin Hormone)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 10. 심장 표지자 검사 -->
+          <div id="type10" class="selected-container">
+            <ul>
+              <!-- Troponin I -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Troponin I</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- CK-MB -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>CK-MB </span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Troponin T -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>Troponin T</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- CK(CPK) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>CK</span>
+                  <span class="sm-text">(CPK)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- D-dimer Test -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>D-dimer Test</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 11. 골형성 표지자 검사 -->
+          <div id="type11" class="selected-container">
+            <ul>
+              <!-- 골형성표지자[정밀면역검사]_(P1NP) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>골형성표지자[정밀면역검사]</span>
+                  <span class="sm-text">(P1NP)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- C-telpeptide of collagen Type 1(CTX) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>C-telpeptide of collagen Type 1 </span>
+                  <span class="sm-text">(CTX)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 12. 암 표지자 검사 -->
+          <div id="type12" class="selected-container">
+            <ul>
+              <!-- CEA(Carcinoembryonic Antigen) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>CEA</span>
+                  <span class="sm-text">(Carcinoembryonic Antigen)</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- AFP -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>AFP</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- CA-125 -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>CA-125</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- CA-15-3 -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>CA-15-3</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- PSA(Prostate Specific Antigen) -->
+              <li class="item-list">
+                <label for="#" class="label">
+                  <span>PSA</span>
+                  <span class="sm-text">Prostate Specific Antigen</span>
+                </label>
+
+                <div class="inp-grp">
+                  <input type="text" class="inp" placeholder="Normal Range">
+                  <div class="question-mark">
+                    <span class="question">?</span>
+
+                    <div class="question-desc"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-wrapper">
+      <button type="button" class="ctrl-btn"></button>
+
+      <div class="ttl">
+        입력항목 (4)
+      </div>
+
+      <div class="content">
+        <div class="inp-list">
+          <span class="text">BUN</span>
+          <div class="text-btn">
+            <span class="text">1</span>
+            <button type="button" class="del-btn">
+              <img src="assets/images/icon-del.svg" alt="">
+            </button>
+          </div>
+        </div>
+
+        <div class="inp-list">
+          <span class="text">T.cholesterol </span>
+          <div class="text-btn">
+            <span class="text">1</span>
+            <button type="button" class="del-btn">
+              <img src="assets/images/icon-del.svg" alt="">
+            </button>
+          </div>
+        </div>
+
+        <div class="inp-list">
+          <span class="text">HDL-cholesterol</span>
+          <div class="text-btn">
+            <span class="text">1</span>
+            <button type="button" class="del-btn">
+              <img src="assets/images/icon-del.svg" alt="">
+            </button>
+          </div>
+        </div>
+
+        <div class="inp-list">
+          <span class="text">e-GFR(ERI)</span>
+          <div class="text-btn">
+            <span class="text">1</span>
+            <button type="button" class="del-btn">
+              <img src="assets/images/icon-del.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="submit-btn" onclick="tempOpenModal('modal-1');">4개 항목 제출</button>
+    </div>
+
+    <div id="modal-1" class="modal-wrapper">
+      <div class="modal-overlay"></div>
+
+      <div class="custom-modal upload-modal">
+        <div class="umodal-contt-container">
+          <div class="umodal-contt">
+            <!-- TODO: 업로드 다 되면 워딩들 변경해야함 -->
+            <div class="title-wrap">
+              <h2 class="title">혈액 검사 결과지 등록중...</h2>
+              <p class="desc">혈액 검사 결과지 등록이 완료되기 전까지 <br>
+                화면을 종료하지 마세요.</p>
+            </div>
+
+            <!-- TODO: 업로드 다 되면 active 클래스 추가 -->
+            <div class="progress-wrap active">
+              <span class="progress">
+                <i class="progress-bar"></i>
+              </span>
+              <div class="progress-txt before-progress-txt">
+                <p class="txt"><span>1</span>/1개 업로드 중...</p>
+              </div>
+              <div class="progress-txt after-progress-txt">
+                <p class="txt"><span>1</span>/1개 업로드 완료!</p>
+                <span class="circle-badge">
+                  <i class="ico ico-check"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="adv-banner-container">
+              <div class="adv-banner-wrap">
+                <div class="adv-banner">
+                  <p class="sample-txt">광고</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/ui.js"></script>
+  <script>
+    $("#list-grp .list").on("click", function () {
+      var typeNum = $(this).attr("data-type");
+
+      $("#list-grp .list").removeClass("active");
+      $(this).addClass("active");
+
+      $(".bottom-wrapper").removeClass("show"); // 안보이게
+      $(".bottom-wrapper").removeClass("active"); // 내려가게
+      $(".page-container").css("padding-bottom", "0"); // 스크롤 여유공간 없애기
+
+      $(".selected-container .inp").val(''); // 입력값 초기화
+      $(".selected-container").removeClass("active");
+      $(`#${typeNum}`).addClass("active");
+    })
+
+    $(".selected-container .inp").on("change", function () {
+      $(".bottom-wrapper").addClass("show"); // 보이게
+      $(".page-container").css("padding-bottom", "70px"); // 스크롤 여유공간 생기기
+    })
+
+    $(".bottom-wrapper .ctrl-btn").on("click", function () {
+      $(".bottom-wrapper").toggleClass("active"); // 올라오게 & 내려오게
+    })
+
+    // 임시로 만든 오픈 모달
+    function tempOpenModal(modal) {
+      openModal(modal);
+
+      setTimeout(function () {
+        closeModal(modal);
+      }, 5000)
+    }
+  </script>
+</body>
+
+</html>

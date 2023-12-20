@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="assets/js/jquery-3.6.1.min.js"></script>
+</head>
+
+<body ontouchstart>
+  <div id="app">
+    <div class="header type-notbd">
+      <div class="hd-left">
+        <button type="button" class="btn hd-btn">
+          <span class="txt-hidden">닫기</span>
+          <i class="ico ico-close"></i>
+        </button>
+      </div>
+
+      <h1 class="hd-title">혈액 검사 결과지</h1>
+    </div>
+
+    <div class="page-wrapper">
+      <div class="page-container">
+        <div class="report-list-container">
+          <div class="view-area">
+            <!-- 탭메뉴 -->
+            <div class="tabs">
+              <button type="button" data-tab-content="tab-content1" class="tab active">
+                입력 중 (2)
+              </button>
+              <button type="button" data-tab-content="tab-content2" class="tab">
+                입력 불가 (0)
+              </button>
+            </div>
+            <!-- END 탭메뉴 -->
+
+            <div class="tab-content-container">
+              <!-- 입력 중 컨텐츠 -->
+              <div id="tab-content1" class="tab-content active">
+                <div class="before-edit-btn-wrap status-row-wrap">
+                  <p class="status-txt">입력중인 결과지 <span class="color-txt">2</span>건</p>
+
+                  <div class="btn-wrap">
+                    <button type="button" class="js-edit-btn btn txt-btn">편집</button>
+                  </div>
+                </div>
+
+                <div class="after-edit-btn-wrap status-row-wrap none">
+                  <button type="button" class="btn txt-btn">전체선택</button>
+
+                  <div class="btn-wrap">
+                    <button type="button" onclick="openModal('modal-1');" class="btn red-txt-btn">삭제</button>
+                    <button type="button" class="js-edit-complete-btn btn txt-btn">완료</button>
+                  </div>
+                </div>
+
+                <div class="edit-col-list-grp col-list-grp">
+                  <div class="list">
+                    <div class="list-item">
+                      <figure class="thumbnail">
+                        <img src="" alt="" class="thumbnail-img">
+                      </figure>
+
+                      <div class="info">
+                        <p class="info-title">혈액 검사 결과지를 입력 중입니다.</p>
+                        <span class="info-desc">2023-10-11 08:44:12</span>
+                      </div>
+
+                      <input type="checkbox" id="checkbox1" class="custom-checkbox-inp none">
+                      <label for="checkbox1" class="custom-checkbox"></label>
+                    </div>
+                  </div>
+
+                  <div class="list">
+                    <div class="list-item">
+                      <figure class="thumbnail">
+                        <img src="" alt="" class="thumbnail-img">
+                      </figure>
+
+                      <div class="info">
+                        <p class="info-title">혈액 검사 결과지를 입력 중입니다.</p>
+                        <span class="info-desc">2023-10-11 08:44:12</span>
+                      </div>
+
+                      <input type="checkbox" id="checkbox2" class="custom-checkbox-inp none">
+                      <label for="checkbox2" class="custom-checkbox"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END 입력 중 컨텐츠 -->
+
+              <!-- 입력 불가 컨텐츠 -->
+              <div id="tab-content2" class="tab-content">
+                <div class="before-edit-btn-wrap status-row-wrap">
+                  <p class="status-txt">입력불가 결과지 <span class="color-txt">2</span>건</p>
+
+                  <div class="btn-wrap">
+                    <button type="button" class="js-edit-btn btn txt-btn">편집</button>
+                  </div>
+                </div>
+
+                <div class="after-edit-btn-wrap status-row-wrap none">
+                  <button type="button" class="btn txt-btn">전체선택</button>
+
+                  <div class="btn-wrap">
+                    <button type="button" class="btn red-txt-btn">삭제</button>
+                    <button type="button" class="js-edit-complete-btn btn txt-btn">완료</button>
+                  </div>
+                </div>
+
+                <div class="edit-col-list-grp col-list-grp">
+                  <div class="list">
+                    <div class="list-item">
+                      <figure class="thumbnail">
+                        <img src="" alt="" class="thumbnail-img">
+                      </figure>
+
+                      <div class="info">
+                        <p class="info-title">사유를 확인해주세요.</p>
+                        <span class="info-desc">2023-10-11 08:44:12</span>
+                      </div>
+
+                      <input type="checkbox" id="checkbox4" class="custom-checkbox-inp none">
+                      <label for="checkbox4" class="custom-checkbox"></label>
+                    </div>
+                  </div>
+
+                  <div class="list">
+                    <div class="list-item">
+                      <figure class="thumbnail">
+                        <img src="" alt="" class="thumbnail-img">
+                      </figure>
+
+                      <div class="info">
+                        <p class="info-title">사유를 확인해주세요.</p>
+                        <span class="info-desc">2023-10-11 08:44:12</span>
+                      </div>
+
+                      <input type="checkbox" id="checkbox5" class="custom-checkbox-inp none">
+                      <label for="checkbox5" class="custom-checkbox"></label>
+                    </div>
+                  </div>
+
+                  <div class="list">
+                    <div class="list-item">
+                      <figure class="thumbnail">
+                        <img src="" alt="" class="thumbnail-img">
+                      </figure>
+
+                      <div class="info">
+                        <p class="info-title">사유를 확인해주세요.</p>
+                        <span class="info-desc">2023-10-11 08:44:12</span>
+                      </div>
+
+                      <input type="checkbox" id="checkbox6" class="custom-checkbox-inp none">
+                      <label for="checkbox6" class="custom-checkbox"></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END 입력 불가 컨텐츠 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-1" class="modal-wrapper">
+      <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
+
+      <div class="custom-modal system-modal">
+        <div class="smodal-contt-container">¸
+          <div class="smodal-contt">
+            <p class="smodal-desc">
+              1장의 혈액 검사 결과지를 <br>
+              삭제하시겠습니까?
+            </p>
+          </div>
+        </div>
+        <div class="smodal-btn-wrap">
+          <button type="button" class="btn" onclick="closeModal('modal-1');">취소</button>
+          <button type="button" class="btn red-btn" onclick="allCloseModal();openFloating();">삭제</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="floating-wrapper">
+      <div class="floating-txt">혈액 검사 결과지가 삭제되었습니다.</div>
+    </div>
+  </div>
+
+  <script src="assets/js/ui.js"></script>
+  <script>
+    $('[data-tab-content]').on('click', function (e) {
+      var content = $(e.currentTarget).attr('data-tab-content');
+
+      $('.tab-content').removeClass('active');
+      $('#' + content).addClass('active');
+
+      $('.tab').removeClass('active');
+      $(e.currentTarget).addClass('active');
+    })
+
+
+    $('.js-edit-btn').on('click', function (e) {
+      $(e.currentTarget).parents('.before-edit-btn-wrap').addClass('none');
+      $(e.currentTarget).parents('.before-edit-btn-wrap').siblings('.after-edit-btn-wrap').removeClass('none');
+      $(e.currentTarget).parents('.before-edit-btn-wrap').siblings('.edit-col-list-grp').addClass('edit-mode');
+    })
+
+    $('.js-edit-complete-btn').on('click', function (e) {
+      $(e.currentTarget).parents('.after-edit-btn-wrap').addClass('none');
+      $(e.currentTarget).parents('.after-edit-btn-wrap').siblings('.before-edit-btn-wrap').removeClass('none');
+      $(e.currentTarget).parents('.after-edit-btn-wrap').siblings('.edit-col-list-grp').removeClass('edit-mode');
+    })
+
+    function openFloating() {
+      setTimeout(function () {
+        $('.floating-wrapper').addClass('active');
+      }, 300)
+
+      setTimeout(function () {
+        $('.floating-wrapper').removeClass('active');
+      }, 1500)
+    }
+  </script>
+</body>
+
+</html>

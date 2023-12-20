@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="assets/js/jquery-3.6.1.min.js"></script>
+</head>
+
+<body ontouchstart>
+  <div id="app">
+    <div class="header">
+      <h1 class="logo">
+        <a href="#">
+          <img src="assets/images/logo-hemochat.png" alt="">
+        </a>
+      </h1>
+
+      <div class="hd-right">
+        <button type="button" class="menu-btn">
+          <img src="assets/images/menu.svg" alt="">
+        </button>
+      </div>
+    </div>
+
+    <div class="header-nav-container">
+      <button type="button" class="close-btn">
+        <i class="ico ico-close"></i>
+      </button>
+      
+      <ul>
+        <li>
+          <a href="chat.html">채팅</a>
+        </li>
+
+        <li>
+          <a href="mypage-main.html">마이페이지</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="page-wrapper">
+      <div class="page-container">
+        <div class="mypage-container">
+          <!-- 상단 띠 -->
+          <div class="mypage-main-top-wrap">
+            <div class="txt-wrap">
+              <i class="ico ico-bell"></i>
+              <p><b>김태신</b>님, AI 혈액검사 분석결과가 도착했습니다.</p>
+            </div>
+
+            <div class="mg-left">
+              <button type="button" class="btn">
+                <span class="txt-hidden">더보기</span>
+                <i class="ico ico-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <!-- END 상단 띠 -->
+
+          <!-- 유저 정보 -->
+          <div class="user-info-item">
+            <div class="user-info-top">
+              <div class="user-info">
+                <figure class="thumbnail">
+                  <img src="assets/images/img-default2.png" alt="" class="thumbnail-img">
+                </figure>
+                <h2 class="name">user295819</h2>
+              </div>
+
+              <button type="button" class="btn edit-btn">정보수정</button>
+            </div>
+
+            <div class="info-list-grp">
+              <dl class="info-list">
+                <dt class="il-dt">의뢰한 결과 분석</dt>
+                <dd class="il-dd">1</dd>
+              </dl>
+
+              <dl class="info-list">
+                <dt class="il-dt">완료한 결과 분석</dt>
+                <dd class="il-dd">4</dd>
+              </dl>
+            </div>
+          </div>
+          <!-- END 유저 정보 -->
+
+          <section class="page-section">
+            <div class="title-wrap">
+              <h3 class="title">내 혈액 검사 결과지</h3>
+
+              <div class="mg-left">
+                <div id="before-edit-btn-wrap" class="btn-wrap">
+                  <button id="edit-btn" type="button" class="btn txt-btn">편집</button>
+                </div>
+
+                <div id="after-edit-btn-wrap" class="btn-wrap none">
+                  <button type="button" class="btn txt-btn">삭제</button>
+                  <button id="edit-complete-btn" type="button" class="btn txt-btn">완료</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-wrap">
+              <!-- TODO: 편집 버튼 누르면 grid-list-grp 에 edit-mode 클래스 추가 -->
+              <ul id="edit-list-grp" class="grid-list-grp">
+                <li class="list">
+                  <div class="figure-item">
+                    <input id="check01" type="checkbox" class="custom-checkbox-inp none">
+                    <label for="check01" class="custom-checkbox"></label>
+                    <figure class="thumbnail">
+                      <img src="assets/images/img-sample2.png" alt="" class="thumbnail-img">
+                    </figure>
+                    <p class="fi-title">2023.03.26</p>
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="figure-item">
+                    <input id="check02" type="checkbox" class="custom-checkbox-inp none">
+                    <label for="check02" class="custom-checkbox"></label>
+                    <figure class="thumbnail">
+                      <img src="assets/images/img-sample2.png" alt="" class="thumbnail-img">
+                    </figure>
+                    <p class="fi-title">2023.03.26</p>
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="figure-item">
+                    <input id="check03" type="checkbox" class="custom-checkbox-inp none">
+                    <label for="check03" class="custom-checkbox"></label>
+                    <figure class="thumbnail">
+                      <img src="assets/images/img-sample2.png" alt="" class="thumbnail-img">
+                    </figure>
+                    <p class="fi-title">2023.03.26</p>
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="figure-item">
+                    <input id="check04" type="checkbox" class="custom-checkbox-inp none">
+                    <label for="check04" class="custom-checkbox"></label>
+                    <figure class="thumbnail">
+                      <img src="assets/images/img-sample2.png" alt="" class="thumbnail-img">
+                    </figure>
+                    <p class="fi-title">2023.03.26</p>
+                  </div>
+                </li>
+                <li class="list">
+                  <div class="figure-item">
+                    <input id="check05" type="checkbox" class="custom-checkbox-inp none">
+                    <label for="check05" class="custom-checkbox"></label>
+                    <figure class="thumbnail">
+                      <img src="assets/images/img-sample2.png" alt="" class="thumbnail-img">
+                    </figure>
+                    <p class="fi-title">2023.03.26</p>
+                  </div>
+                </li>
+                <!-- 1줄 -->
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/ui.js"></script>
+  <script>
+    $('#edit-btn').on('click', function (e) {
+      $('#before-edit-btn-wrap').addClass('none');
+      $('#after-edit-btn-wrap').removeClass('none');
+      $('#edit-list-grp').addClass('edit-mode');
+    })
+
+    $('#edit-complete-btn').on('click', function (e) {
+      $('#before-edit-btn-wrap').removeClass('none');
+      $('#after-edit-btn-wrap').addClass('none');
+      $('#edit-list-grp').removeClass('edit-mode');
+    })
+  </script>
+</body>
+
+</html>

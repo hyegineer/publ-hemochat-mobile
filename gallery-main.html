@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="assets/js/jquery-3.6.1.min.js"></script>
+</head>
+
+<body ontouchstart>
+  <div id="app">
+    <div class="header">
+      <div class="hd-left">
+        <button type="button" class="btn hd-btn">
+          <span class="txt-hidden">닫기</span>
+          <i class="ico ico-close"></i>
+        </button>
+      </div>
+
+      <h1 class="hd-title">사진 전체</h1>
+    </div>
+
+    <div class="page-wrapper">
+      <div class="page-container">
+        <div class="gallery-container">
+          <div class="gallery-view-area">
+            <ul class="grid-list-grp">
+              <li class="list">
+                <div class="gall-item">
+                  <figure class="thumbnail">
+                    <img src="" alt="" class="thumbnail-img">
+                  </figure>
+
+                  <input id="checkbox01" type="checkbox" class="custom-checkbox-inp none">
+                  <label for="checkbox01" class="custom-checkbox"></label>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="gallery-btn-area">
+            <button type="button" class="theme-solid-btn">1장 선택</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/ui.js"></script>
+</body>
+
+</html>

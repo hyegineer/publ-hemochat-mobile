@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script src="assets/js/jquery-3.6.1.min.js"></script>
+</head>
+
+<body ontouchstart>
+  <div id="app">
+    <div class="page-wrapper">
+      <div class="page-container">
+        <div class="cam-container">
+          <div class="cam-view-area">
+            <!-- 카메라 화면 -->
+            <div class="cam-view">
+              <img src="assets/images/img-sample1.png" alt="" class="sample-img">
+            </div>
+            <!-- END 카메라 화면 -->
+
+            <div class="cam-view-border">
+              <span class="guide-ment">원이 보이면 촬영해주세요.</span>
+            </div>
+
+            <button type="button" class="btn close-btn">
+              <span class="txt-hidden">촬영 닫기</span>
+              <i class="ico ico-close ico-white"></i>
+            </button>
+          </div>
+
+          <div class="cam-control-area">
+            <div class="left-wrap">
+              <button type="button" class="btn ctrl-btn">
+                <span class="txt-hidden">앨범 보기</span>
+                <i class="ico ico-gall"></i>
+              </button>
+            </div>
+
+            <button type="button" class="center-ctrl-btn">
+              <span class="txt-hidden">촬영</span>
+            </button>
+
+            <div class="right-wrap">
+              <div class="status-txt-wrap">
+                <span class="badge-txt">
+                  <span class="txt">2</span>
+                  <i class="ico ico-arrow-right"></i>
+                </span>
+
+                <p class="status-txt">촬영완료</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="assets/js/ui.js"></script>
+</body>
+
+</html>
