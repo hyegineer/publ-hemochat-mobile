@@ -11,3 +11,11 @@ function closeModal(id) {
 function allCloseModal() {
   $('.modal-wrapper').removeClass('active');
 }
+
+$('.header .menu-btn').on('click', function () {
+  $('.header-nav-container').addClass('show');
+})
+
+$('.header-nav-container .close-btn').on('click', function () {
+  $('.header-nav-container').removeClass('show');
+})
