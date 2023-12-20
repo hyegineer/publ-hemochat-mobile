@@ -141,6 +141,7 @@ body {
   position: relative;
   z-index: 1;
   word-break: keep-all;
+  color: #2b2b2b;
 }
 
 .checkup-list-grp .list.active {
